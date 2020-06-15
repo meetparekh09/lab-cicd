@@ -16,8 +16,8 @@ on:
 name: Flask project `dockerized-flask` CI on ECR
 
 jobs:
-  deploy:
-    name: Deploy
+  build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
