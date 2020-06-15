@@ -24,9 +24,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Test
+    - name: Build Test Image
       run:
         make build
+
+    - name: Test
+      run:
         make unit
 
     - name: Install dependencies
