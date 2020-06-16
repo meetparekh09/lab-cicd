@@ -75,6 +75,10 @@ jobs:
       run:
         sleep 10
 
+    - name: AWS Trial
+      run:
+        aws s3 ls
+
 
 
 
