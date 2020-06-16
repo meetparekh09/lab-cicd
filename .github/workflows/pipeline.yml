@@ -70,14 +70,7 @@ jobs:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: dockerized-flask-app
         cluster: sample-cluster
-
-    - name: Sleep
-      run:
-        sleep 10
-
-    - name: AWS Trial
-      run:
-        aws s3 ls
+        wait-for-service-stability: true
 
 
 
