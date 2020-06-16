@@ -59,6 +59,9 @@ jobs:
     - name: Remove old task
       run:
         aws ecs stop-task --cluster sample-cluster --task `aws ecs list-tasks --cluster sample-cluster --family sample-task | grep ".*\"arn:" | sed -e 's/^[[:space:]]*//' | sed -e 's/^\"//' | sed -e 's/\"$//'`
+
+    - name: Sleep
+      run:
         sleep 10
 
     - name: Fill in the new image ID in the Amazon ECS task definition
