@@ -49,7 +49,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "dockerized-flask-container"
+      "name": "sample-app-container"
     }
   ],
   "placementConstraints": [],
@@ -58,8 +58,8 @@
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:136125053167:task-definition/dockerized-flask:2",
-  "family": "dockerized-flask",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:136125053167:task-definition/sample-task:1",
+  "family": "sample-task",
   "requiresAttributes": [
     {
       "targetId": null,
