@@ -70,7 +70,10 @@ jobs:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: dockerized-flask-app
         cluster: sample-cluster
-        wait-for-service-stability: true
+
+    - name: Sleep
+      run:
+        sleep 10
 
 
 
