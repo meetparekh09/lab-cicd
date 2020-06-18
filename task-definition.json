@@ -26,7 +26,20 @@
       "dnsServers": null,
       "mountPoints": [],
       "workingDirectory": "/lab-cicd",
-      "secrets": null,
+      "secrets": [
+        {
+          "name": "MYSQL_TEST_HOST",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:136125053167:secret:database-credentials-RvDMod"
+        },
+        {
+          "name": "MYSQL_TEST_PASSWORD",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:136125053167:secret:database-credentials-RvDMod"
+        },
+        {
+          "name": "MYSQL_TEST_USER",
+          "valueFrom": "arn:aws:secretsmanager:us-east-1:136125053167:secret:database-credentials-RvDMod"
+        }
+      ],
       "dockerSecurityOptions": null,
       "memory": null,
       "memoryReservation": 128,
