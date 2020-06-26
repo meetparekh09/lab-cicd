@@ -56,10 +56,6 @@ jobs:
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
-    - name: Remove old task
-      run:
-        aws ecs stop-task --cluster sample-cluster --task `aws ecs list-tasks --cluster sample-cluster --family sample-task | grep ".*\"arn:" | sed -e 's/^[[:space:]]*//' | sed -e 's/^\"//' | sed -e 's/\"$//'`
-
     - name: Sleep
       run:
         sleep 10
