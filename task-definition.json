@@ -27,18 +27,6 @@
       "mountPoints": [],
       "workingDirectory": "/lab-cicd",
       "secrets": [
-        {
-          "name": "MYSQL_TEST_HOST",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:136125053167:secret:database-credentials-RvDMod"
-        },
-        {
-          "name": "MYSQL_TEST_PASSWORD",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:136125053167:secret:database-credentials-RvDMod"
-        },
-        {
-          "name": "MYSQL_TEST_USER",
-          "valueFrom": "arn:aws:secretsmanager:us-east-1:136125053167:secret:database-credentials-RvDMod"
-        }
       ],
       "dockerSecurityOptions": null,
       "memory": null,
@@ -71,7 +59,7 @@
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:136125053167:task-definition/sample-task:1",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:136125053167:task-definition/sample-task",
   "family": "sample-task",
   "requiresAttributes": [
     {
